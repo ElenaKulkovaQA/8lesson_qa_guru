@@ -9,6 +9,7 @@ public class BaseLinguise {
         Configuration.baseUrl = "https://www.linguise.com/";
         Configuration.pageLoadStrategy = "eager";
         Configuration.holdBrowserOpen = false;
+
     }
 
 }
