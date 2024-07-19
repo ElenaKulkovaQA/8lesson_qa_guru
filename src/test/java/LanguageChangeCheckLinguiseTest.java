@@ -4,6 +4,7 @@ import utils.Language;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -13,8 +14,7 @@ public class LanguageChangeCheckLinguiseTest extends BaseLinguise {
     @ParameterizedTest
     @CsvSource({"Russian, Поддерживать", "Spanish, Apoyo"})
     void languageChangeCheckForHederBlock(String language, String word) {
-
-        open("https://www.linguise.com/");
+        open("");
 
         $(".linguise_flags.linguise_language_icon").click();
 
@@ -23,12 +23,12 @@ public class LanguageChangeCheckLinguiseTest extends BaseLinguise {
         $("ul.uc-mega_menu_list").shouldHave(text(word));
 
     }
+
     @DisplayName("Проверкасмены  языка для баннера")
     @EnumSource(Language.class)
     @ParameterizedTest
     void changeTexstForBanner(Language chooseLang) {
-
-        open("https://www.linguise.com/");
+        open("");
 
         $(".linguise_flags.linguise_language_icon").click();
 
